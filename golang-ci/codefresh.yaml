@@ -12,12 +12,11 @@ steps:
     repo: https://github.com/verchol/${{CF_REPO_NAME}}
     revision: ${{CF_BRANCH}}
     git: github
-
-  prepare_environment_variabels_on_hub:
+ compile:
     stage: prepare
-    image:  goreleaser/goreleaser:v0.138
+    image:  golang
     commands:
-    -  goreleaser build --snapshot
+    -  go build .
     when:
       steps:
       - name: main_clone

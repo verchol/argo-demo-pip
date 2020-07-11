@@ -303,9 +303,8 @@ spec:
     - Github-release-token
   specTemplate:
     location: git
-    repo: codefresh-io/pipelines
-    path: ./ci-golang.yaml
-    revision: SAAS-new-release-improvments
+    repo: verchol/argo-demo-pip
+    path: ./golang-ci/codefresh.yaml
     context: github
   debug:
     steps:
