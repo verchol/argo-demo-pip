@@ -296,11 +296,6 @@ spec:
     - key: API_KEY
       value: 5e5e21897f234b3c550ecd2a
       encrypted: false
-  contexts:
-    - codecov
-    - twistlock
-    - twistlocksecrets
-    - Github-release-token
   specTemplate:
     location: git
     repo: verchol/argo-demo-pip
