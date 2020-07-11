@@ -1,8 +1,8 @@
 version: '1.0'
 kind: pipeline
 metadata:
-  name: codefresh-io/pipelines/ci-golang
-  project: codefresh-io/pipelines
+  name: codefresh-io/pipelines/rollouts-demo-ci
+  project: verchol/rollouts-demo
   projectId: 5c98d438bd5b6f40758ee4ff
   labels:
     tags: []
@@ -10,7 +10,7 @@ spec:
   triggers:
     - name: kubecli
       type: git
-      repo: verchol/kubecli
+      repo: verchol/rollouts-demo
       events:
         - push.heads
       pullRequestAllowForkEvents: false
