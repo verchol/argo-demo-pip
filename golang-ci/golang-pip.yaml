@@ -310,7 +310,7 @@ spec:
           override: false
           after: false
   terminationPolicy: []
-  externalResources:
+  #externalResources:
    # - type: git
   #    source: .trivyignore
    #   context: github
