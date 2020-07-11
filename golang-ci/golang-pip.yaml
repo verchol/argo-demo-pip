@@ -8,7 +8,7 @@ metadata:
     tags: []
 spec:
   triggers:
-    - name: kubecli
+    - name: rollouts-demo
       type: git
       repo: verchol/rollouts-demo
       events:
@@ -300,6 +300,7 @@ spec:
     location: git
     repo: verchol/argo-demo-pip
     path: ./golang-ci/codefresh.yaml
+    revision: master
     context: github
   debug:
     steps:
