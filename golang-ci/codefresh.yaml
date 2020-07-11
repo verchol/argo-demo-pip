@@ -12,7 +12,7 @@ steps:
     repo: https://github.com/verchol/${{CF_REPO_NAME}}
     revision: ${{CF_BRANCH}}
     git: github
- compile:
+  compile:
     stage: prepare
     image:  golang
     commands:
