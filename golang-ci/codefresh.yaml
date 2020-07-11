@@ -1,0 +1,27 @@
+version: '1.0'
+mode: parallel
+stages:
+- prepare
+- test
+- build
+steps:
+  main_clone:
+    stage: prepare
+    title: 'Cloning main repository...'
+    type: git-clone
+    repo: https://github.com/verchol/${{CF_REPO_NAME}}
+    revision: ${{CF_BRANCH}}
+    git: github
+
+  prepare_environment_variabels_on_hub:
+    stage: prepare
+    image:  goreleaser/goreleaser:v0.138
+    commands:
+    -  goreleaser build --snapshot
+    when:
+      steps:
+      - name: main_clone
+        on:
+        - success
+
+  
